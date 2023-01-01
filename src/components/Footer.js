@@ -6,13 +6,7 @@ function Footer() {
     return (
         <footer id="footer" className="footer">            
             <p>
-                Made with ❤ by
-                <a
-                    href="https://github.com/seyon123"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                > Seyon Rajagopal </a>
-                <br/>
+            &copy; planeinfo
 
             </p>
         </footer>

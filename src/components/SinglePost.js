@@ -5,6 +5,13 @@ import firebase from "firebase";
 import { useStateValue } from '../StateProvider';
 import './SinglePost.css'
 
+
+
+
+
+ 
+
+
 function SinglePost() {
     const { id } = useParams();
 
@@ -16,8 +23,11 @@ function SinglePost() {
     const icon = document.getElementById(id);
 
     useEffect(() => {
-		document.title = `${(post?.username +" "+ post?.caption)} | Reacttagram`;
+		document.title = `${(post?.username +", "+ post?.caption)} | Planeinfo`;
 	}, [post?.caption, post?.username])
+
+    
+
 
     useEffect(() => {
         if(id){
@@ -38,6 +48,8 @@ function SinglePost() {
             });
         }
     }, [id])
+
+
 
     useEffect(()=> {
         if(id && user){
@@ -79,26 +91,53 @@ function SinglePost() {
             }
         }
     }
+     
+        
+
+       
+
+
 
     return post && (
+
+
         <div className="singlePostContainer">
+
+
             <div className="singlePost">
                 <img
+                    
                     className="singlePostImage"
                     src={post.imageUrl}
                     alt={id}
                 />
-                                
+
+                              
+
                 <div className="singlePostRight">
                     <div className="postHeader">
+
                         <img
+                            onclick="enlargeImg()"
                             className="avatar"
                             src={post.avatar}
                             alt={post.username}
                             title={post.username}
                         />
+
                         <Link className="commentLink" to={`/profile/${post.email}`}><h3 className="postUsername">{post.username}</h3></Link>
                     </div>
+
+                    
+                    <h9>Plane type: <a href={`http://planeinfo.co.uk/planes/${post.Aircraft}`}><h9>{post.Aircraft}</h9></a></h9>
+                    <br />
+                    <h9>Airline: {post.Airline}</h9>
+
+                    <br /><br />
+                    <div>
+
+
+
                     <div className="postComments singlePostComments">
                         {post.caption &&
                         <p className="postCaption">
@@ -115,6 +154,10 @@ function SinglePost() {
                         <i onClick={changeHeart} id={id} className="far fa-heart postInteractionItem postHeart"></i>           
                         <i className="far fa-comment postInteractionItem"></i>
                     </div>
+
+
+
+
                     {user ?
                         <form className="postCommentsInput">
                             <input className="postComment" type="text" placeholder="Add a comment..." value={comment} onChange={(e) => setComment(e.target.value)}/>
@@ -122,10 +165,30 @@ function SinglePost() {
                         </form> : 
                     ""
                     }
-                </div>
-		    </div>
-        </div>
-    )
-}
 
+
+                    
+
+                </div>
+                
+		    </div>
+
+            
+       
+            <div>
+
+       
+
+
+
+</div>
+</div>
+
+</div>
+
+
+    )
+    
+
+               };       
 export default SinglePost

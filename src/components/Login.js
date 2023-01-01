@@ -9,7 +9,7 @@ function Login() {
 	const [password, setPassword] = useState("");
 
 	useEffect(() => {
-		document.title = `Login | Reacttagram`;
+		document.title = `Login | Planeinfo`;
 	}, [])
 
 	const signIn = () => {
@@ -48,47 +48,16 @@ function Login() {
 		<div className="login">
 			<div className="loginContainer">
 				<Link to="/" className="link">
-					<h1 className="loginLogo">Reacttagram</h1>
+					<h1 className="loginLogo">Planeinfo</h1>
 				</Link>
-				<h1>Sign-in</h1>
+				
 
-				<form>
-					<h5>E-mail</h5>
-					<input
-						type="text"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-					/>
-
-					<h5>Password</h5>
-					<input
-						type="password"
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
-					/>
-
-					<button
-						type="submit"
-						onClick={signInEmail}
-						className="loginSignInButton"
-					>
-						Sign In
-					</button>
-				</form>
-
-				<button className="loginRegisterButton" onClick={register}>
-					Create your Reacttagram Account
-				</button>
-
-				<br/><h5>OR</h5>
 				<button onClick={signIn} className="loginSignInButtonGoogle">
 					<i className="fab fa-google"></i> Sign In with Google
 				</button>
 
 				<p>
-					Disclaimer: This is a fake social media platform called Reacttagram. This was created for demo purposes only. Do not take any 
-					posts seriously as they are unmonitored and may not be from real users. If you want to try this app without using your personal
-					 information use email: <b>demo@demo.com</b> and <b>Demo123</b> as password.
+					Warning: This is a rapidly developing site so some things may be vulneruble or unprotected and there may be bugs.
 				</p>
 
 			</div>

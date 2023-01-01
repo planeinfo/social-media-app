@@ -13,7 +13,7 @@ function Post({ postId, post, user }) {
     const icon = document.getElementById(postId);
 
     useEffect(() => {
-		document.title = `Home | Reacttagram`;
+		document.title = `Home | Planeinfo`;
 	}, [])
 
 

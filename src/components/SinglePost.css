@@ -3,8 +3,9 @@
     justify-content: center;
     align-content: center;
     min-height: calc(100vh - 113px);
-    
 }
+
+
 
 .singlePost {
     width: fit-content;
@@ -20,13 +21,21 @@
 
 .singlePostImage {
     width: 100%;
-    min-width: 500px;
+    min-width: 100%;
     max-width: 500px;
     max-height: 700px;
     object-fit: cover;
     border-radius: 5px 0 0 5px;
     border-top: 1px solid var(--icon-bg) ;
     border-bottom: 1px solid var(--icon-bg) ;
+}
+
+.report{
+    border-radius: 8px;
+    padding: 10px;
+    color: red;
+    background-color: white;
+    font-style: italic;
 }
 
 .singlePostRight{

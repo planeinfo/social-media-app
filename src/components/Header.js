@@ -40,7 +40,7 @@ function Header() {
 	return (
 		<div className="header">
 			<Link className="link headerTitle" to="/">
-				<h1 className="headerLogo">Reacttagram</h1>
+				<h1 className="headerLogo">&#128743; planeinfo</h1>
 			</Link>
 
 			<div className="headerSearchContainer">
@@ -56,11 +56,7 @@ function Header() {
 					</div>
 				</Link>
 
-				<Link target="_blank" to="/chat" className="link headerOptionBasket" onClick={(event) => {event.preventDefault(); window.open("http://messagemeapp.netlify.app/");}}>
-					<div className="headerOptionBasket">
-						<i className="far fa-comments"></i>
-					</div>
-				</Link>
+				
 
 				<Link to={`/profile/${user?.email}`} className="link headerOptionBasket">
 					<div className="headerOptionBasket">
